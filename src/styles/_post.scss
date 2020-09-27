@@ -78,7 +78,6 @@
 .post-content {
   padding: 0 2.5em 2em;
   margin-top: 1.5em;
-  font-size: 1em;
 
   h2 {
     border-left: 3px $primary solid;
@@ -109,6 +108,7 @@
   p {
     margin-bottom: 1.5em;
     white-space: pre-wrap;
+    font-size: 1em;
   }
 
   a {
