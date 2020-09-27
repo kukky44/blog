@@ -1,0 +1,34 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $bg_color;
+  z-index: 2;
+  transition: 0.5s;
+  box-shadow: none;
+  top: 0;
+
+  &.onScroll {
+    box-shadow: $base_shadow;
+    background-color: $white;
+  }
+}
+
+.header-content {
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 1.25em;
+  font-weight: bold;
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    button {
+      font-size: 1.5em;
+    }
+  }
+}

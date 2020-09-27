@@ -1,0 +1,28 @@
+$breakpoints: (
+  "sm": "screen and (max-width: 480px)",
+  "hf": "screen and (max-width: 620px)",
+  "md": "screen and (max-width: 780px)",
+  "lg": "screen and (max-width: 1000px)",
+  "xl": "screen and (max-width: 1200px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+$bg_color: #f2f4fb;
+$black: #121212;
+$white: #ffffff;
+$primary: #6200ee;
+$secondary: #03dac6;
+$tertiary: #0c2af7;
+$type_grey: #b1b1b1;
+
+$base_font: roboto;
+$accent_font: roboto mono;
+$code_font: source code pro;
+
+$base_shadow: 0px 4px 16px -10px rgba(0, 0, 0, 0.16);
+$hover_shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);

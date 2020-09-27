@@ -1,0 +1,97 @@
+.gatsby-code-title {
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+  background-color: $primary;
+  color: $white;
+  padding: 0 1em;
+  font-family: roboto mono;
+  font-weight: bold;
+  font-size: 0.75em;
+  display: table;
+  z-index: 1;
+  border-radius: 5px 0;
+  margin-bottom: -24px;
+}
+
+.gatsby-highlight {
+  background-color: $black;
+  border-radius: 5px;
+  font-family: $code_font;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $type_grey;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #efefef;
+  }
+}
+
+pre[class*="language-"] {
+  overflow-x: auto;
+  color: $white;
+  padding: 2.75em 1em 1.5em;
+  font-size: 1em;
+  line-height: 2;
+  text-align: left;
+  white-space: pre;
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+pre.language-text {
+  padding: 1.5em 1em;
+}
+
+.token.keyword,
+.token.operator,
+.token.tag {
+  color: #7fdbca;
+}
+
+.token.builtin,
+.token.char,
+.token.constant,
+.token.function {
+  color: #82aaff;
+}
+
+.token.punctuation {
+  color: #c792ea;
+}
+
+.custom-block {
+  padding: 1em;
+  background-color: #f1f4f7;
+  border-radius: 5px;
+  margin: 1em 0;
+
+  &-heading {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  &-body {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &.info {
+    border-left: 3px $primary solid;
+  }
+
+  &.notice {
+    background-color: rgb(240, 168, 106);
+  }
+
+  &.alert {
+    background-color: rgb(243, 112, 112);
+  }
+}

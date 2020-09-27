@@ -1,0 +1,93 @@
+@keyframes pageIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.contentWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 64px;
+
+  @include mq(lg) {
+    max-width: 760px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 24px;
+
+  @include mq(lg) {
+    display: block;
+  }
+
+  @include mq(sm) {
+    padding: 0 1em;
+  }
+
+  &.postPage {
+    @include mq(sm) {
+      padding: 0;
+    }
+  }
+
+  &-main {
+    width: calc((100% - 300px) - 2em);
+    margin-right: 2em;
+    margin-bottom: 1.5em;
+    animation-name: pageIn;
+    animation-duration: 0.5s;
+
+    @include mq(lg) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.bio {
+  width: 300px;
+  position: sticky;
+  top: 70px;
+  padding: 1.5em;
+  background-color: $white;
+  box-shadow: $base_shadow;
+
+  @include mq(lg) {
+    width: 100%;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+
+    &__img {
+      margin-right: 10px;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $black;
+      }
+    }
+
+    &__name {
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+  }
+  &-description {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+  }
+}

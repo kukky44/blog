@@ -1,0 +1,54 @@
+.tableOfContentWrapper {
+  overflow: scroll;
+}
+
+.post-tableOfContent {
+  padding-left: 0.5em;
+  &__title {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  ol {
+    margin: 0;
+    counter-reset: number 0;
+    margin-bottom: 2em;
+    padding: 0;
+
+    li {
+      margin: 0;
+      list-style: none;
+
+      a {
+        padding: 0.5em 1em;
+        border-left: 2px solid rgba(0, 0, 0, 0.12);
+        color: #616161;
+        transition: 0.3s;
+        display: block;
+        &:hover,
+        &.active {
+          color: $black;
+          text-decoration: none;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  &.forSm {
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &.sticky {
+    position: sticky;
+    top: 6em;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+}

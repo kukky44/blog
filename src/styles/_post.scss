@@ -1,0 +1,212 @@
+.post-wrapper {
+  background: $white;
+  box-shadow: $base_shadow;
+}
+
+.post-item {
+  &__thumb {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &Img {
+      width: 100%;
+    }
+  }
+
+  &__cat {
+    font-family: $accent_font;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1em;
+    padding: 6px 12px;
+    background-color: $primary;
+    color: $white;
+    z-index: 1;
+
+    &.develop {
+      background-color: $secondary;
+    }
+    &.self {
+      background-color: $tertiary;
+    }
+  }
+
+  &__infoWrapper {
+    padding: 1.5em 0;
+    border-bottom: 1px #f2f4fb solid;
+  }
+
+  &__info {
+    padding: 0 2.5em 1em;
+
+    @include mq(md) {
+      padding: 0 1em 1em;
+    }
+  }
+
+  &__date {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    color: $type_grey;
+  }
+
+  &__title {
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+}
+
+.post-tags {
+  padding: 0 2.5em;
+  margin-bottom: 2em;
+  display: flex;
+  @include mq(md) {
+    padding: 0 1em;
+  }
+
+  &__item {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border: 1px $black solid;
+    margin-right: 0.5em;
+  }
+}
+
+.post-content {
+  padding: 0 2.5em 2em;
+  margin-top: 1.5em;
+  font-size: 1em;
+
+  h2 {
+    border-left: 3px $primary solid;
+    margin: 2em 0 1em;
+    padding-left: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin: 1.5em 0 1em;
+    font-size: 1.4em;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin: 1.25em 0 0.75em;
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+    font-size: 1.15em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+    white-space: pre-wrap;
+  }
+
+  a {
+    color: #41b2ec;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  ol {
+    counter-reset: number 0;
+    margin: 1em 0 1.5em;
+    li {
+      position: relative;
+      margin: 1em 0;
+      padding-left: 2.25em;
+
+      &:before {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 50%;
+        background-color: $secondary;
+        text-align: center;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 14px;
+        color: $white;
+        top: 0;
+        left: 0;
+        content: counter(number);
+        counter-increment: number 1;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 1.25em;
+    margin: 1em 0 1.5em;
+    li {
+      list-style: square;
+      margin: 0.5em 0;
+    }
+  }
+
+  p > code.language-text {
+    color: #454e63;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    padding: 3px 5px;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote p {
+    border-left: 3px solid $type_grey;
+    padding: 0.5em 0;
+    padding-left: 1em;
+    color: #717171;
+  }
+
+  @include mq(md) {
+    padding: 3em 1em 2em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    a svg {
+      display: none;
+    }
+  }
+}
+
+hr {
+  display: block;
+  margin: 2em 0px;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 2px solid rgb(225, 234, 243);
+}
+
+.relatedPost {
+  &-title {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+  margin-top: 2.5em;
+}

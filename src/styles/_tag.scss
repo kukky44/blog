@@ -1,0 +1,58 @@
+.tagPage {
+  &-title {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    position: relative;
+
+    &:after {
+      content: "";
+      margin: 0 auto;
+      display: block;
+      height: 2px;
+      background-color: $primary;
+      width: 2em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.postcard-tags {
+  padding: 0 1.5em;
+  margin-bottom: 2em;
+  display: flex;
+
+  &__item {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border: 1px $black solid;
+    margin-right: 0.5em;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.allTags {
+  padding: 2.5em 0;
+  background-image: linear-gradient(90deg, #034640 0%, #03dac6 100%);
+  color: $white;
+
+  &-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .postcard-tags {
+    justify-content: center;
+    &__item {
+      color: $white;
+      border-color: $white;
+    }
+  }
+}
