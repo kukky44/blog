@@ -1,0 +1,85 @@
+@keyframes tagFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.search {
+  min-height: 90vh;
+
+  &Wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &Form {
+    display: flex;
+    justify-content: center;
+
+    @include mq(sm) {
+      justify-content: space-between;
+      padding: 0 1em;
+    }
+
+    &-input {
+      font-size: 2em;
+      margin-right: 0.5em;
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
+
+      @include mq(sm) {
+        font-size: 1.5em;
+        min-width: 2em;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-btn {
+      font-size: 2em !important;
+      padding: 15px;
+      color: $type_grey;
+      pointer-events: none;
+      transition: 0.3s;
+
+      &.active {
+        cursor: pointer;
+        pointer-events: auto;
+        transition: 0.3s;
+        color: $black;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &:active {
+        outline: none;
+      }
+    }
+
+    &-suggestTag {
+      animation-name: tagFadeIn;
+      animation-duration: 0.3s;
+
+      .postcard-tags {
+        &__item {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+
+  &-result {
+    margin-top: 2em;
+  }
+}

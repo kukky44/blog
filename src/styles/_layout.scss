@@ -1,11 +1,9 @@
 @keyframes pageIn {
   0% {
     opacity: 0;
-    transform: translateX(-3px);
   }
   100% {
     opacity: 1;
-    transform: none;
   }
 }
 
@@ -19,7 +17,7 @@
   }
 }
 
-.content {
+.flexContent {
   display: flex;
   align-items: flex-start;
   padding: 0 24px;
@@ -59,6 +57,10 @@
   padding: 1.5em;
   background-color: $white;
   box-shadow: $base_shadow;
+
+  &.searchPage {
+    display: none;
+  }
 
   @include mq(lg) {
     width: 100%;

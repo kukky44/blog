@@ -19,7 +19,7 @@ const CategoryLink = ({ catName, catLink, path }) => {
 };
 
 const CategoryMenu = ({ location }) => {
-  const path = location;
+  const path = window.location.pathname;
   return (
     <nav className="category-menu">
       <ul className="category-menu__list">

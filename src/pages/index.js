@@ -2,27 +2,21 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import PostCard from "../components/PostCard";
+import PostList from "../components/PostList";
 
 // TODO: 本文の余白の見直し
 // TODO: 検索機能
 // TODO: プロフィールのSNS icon
-// TODO: 遷移アニメーション
 // TODO: footer の作成
 // TODO: ロゴ作成
 
 const IndexPage = ({ data }) => {
   const posts = data.allMdx.edges;
-  const isCatMenu = true;
 
   return (
-    <Layout catMenu={isCatMenu}>
+    <Layout>
       <SEO title="Home" />
-      <div className="postcards">
-        {posts.map(({ node }) => (
-          <PostCard key={node.fields.slug} node={node} />
-        ))}
-      </div>
+      <PostList posts={posts} />
     </Layout>
   );
 };

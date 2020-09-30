@@ -106,9 +106,15 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+  border: none;
+  background: none;
 }
 
 a {
   text-decoration: none;
   color: #121212;
+}
+
+button:active {
+  outline: none;
 }

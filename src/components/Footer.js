@@ -14,11 +14,7 @@ const Footer = () => {
           }
         });
         let tagList = [];
-        tagsGroup.forEach((tags) => {
-          tags.forEach((tag) => {
-            tagList.push(tag);
-          });
-        });
+        tagsGroup.forEach((tags) => tags.forEach((tag) => tagList.push(tag)));
         tagList = [...new Set(tagList)];
 
         return (

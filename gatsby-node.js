@@ -71,11 +71,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     });
     let tagList = [];
-    tagsGroup.forEach((tags) => {
-      tags.forEach((tag) => {
-        tagList.push(tag);
-      });
-    });
+    tagsGroup.forEach((tags) => tags.forEach((tag) => tagList.push(tag)));
     tagList = new Set(tagList);
     tagList.forEach((tag) => {
       createPage({

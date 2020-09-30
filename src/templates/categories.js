@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PostCard from "../components/PostCard";
+import PostList from "../components/PostList";
 import SEO from "../components/SEO";
 
-const Categories = ({ pageContext, data }) => {
+const Categories = ({ pageContext, data, location }) => {
   const posts = data.allMdx.edges;
   // get Category name from category slug
   const categorySlug = pageContext.category;
@@ -14,16 +14,10 @@ const Categories = ({ pageContext, data }) => {
   // use slug when name doesn't exist
   const categoryName = categoryObject ? categoryObject.name : categorySlug;
 
-  const isCatMenu = true;
-
   return (
-    <Layout catMenu={isCatMenu}>
+    <Layout location={location}>
       <SEO title={categoryName} />
-      <div className="postcards">
-        {posts.map(({ node }) => {
-          return <PostCard key={node.fields.slug} node={node} />;
-        })}
-      </div>
+      <PostList posts={posts} />
     </Layout>
   );
 };
