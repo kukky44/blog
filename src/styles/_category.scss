@@ -5,6 +5,11 @@
   font-family: $accent_font;
   font-weight: bold;
   overflow: scroll;
+
+  @include mq(sm) {
+    font-size: 1.15em;
+    padding: 0.5em 1em 1.25em;
+  }
 }
 
 .cat-item {

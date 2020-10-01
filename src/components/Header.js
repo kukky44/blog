@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, navigate } from "gatsby";
 import headerShowOff from "../module/headerShowOff";
+import Logo from "../images/logo.svg";
 
 const Header = ({ location }) => {
   let isSearchPage = false;
@@ -25,7 +26,9 @@ const Header = ({ location }) => {
       <div className="headerWrapper">
         <div className="header-content">
           <Link className="header-content__title" to="/">
-            <h1 className="header-content__titleText">Kukky</h1>
+            <h1 className="header-content__titleText">
+              <img src={Logo} alt="Kukky" />
+            </h1>
           </Link>
           {isSearchPage ? (
             <div className="header-content__search">

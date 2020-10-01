@@ -23,6 +23,20 @@
   font-size: 1.25em;
   font-weight: bold;
 
+  @include mq(sm) {
+    padding: 0 1em;
+    padding-right: 4px;
+  }
+
+  &__titleText {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    img {
+      height: 32px;
+    }
+  }
+
   &__search {
     display: flex;
     align-items: center;

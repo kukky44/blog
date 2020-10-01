@@ -21,12 +21,12 @@
   }
 }
 
-.postcard-tags {
+.tags {
   padding: 0 1.5em;
   margin-bottom: 2em;
   display: flex;
 
-  &__item {
+  &-item {
     font-size: 0.8rem;
     padding: 5px 10px;
     border: 1px $black solid;
@@ -51,9 +51,9 @@
     text-align: center;
   }
 
-  .postcard-tags {
+  .tags {
     justify-content: center;
-    &__item {
+    &-item {
       color: $white;
       border-color: $white;
     }

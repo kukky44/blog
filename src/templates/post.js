@@ -6,6 +6,7 @@ import SEO from "../components/SEO";
 import RelatedPosts from "../components/RelatedPosts";
 import TableOfContents from "../components/TableOfContents";
 import Img from "gatsby-image";
+import TagList from "../components/TagList";
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
@@ -22,7 +23,15 @@ if (typeof window !== "undefined") {
 
 export default ({ data, pageContext }) => {
   const post = data.mdx;
-  const { title, description, date, category, thumbnail } = post.frontmatter;
+  const {
+    title,
+    description,
+    date,
+    category,
+    thumbnail,
+    tags,
+  } = post.frontmatter;
+
   return (
     <Layout postPage={post}>
       <SEO title={title} description={description || post.excerpt} />
@@ -45,8 +54,7 @@ export default ({ data, pageContext }) => {
                   <h2 className="post-item__title">{title}</h2>
                 </div>
                 <div className="post-tags">
-                  <div className="post-tags__item">Gatsby</div>
-                  <div className="post-tags__item">Netlify</div>
+                  {tags ? <TagList items={tags} /> : null}
                 </div>
               </div>
               <div className="post-content">
@@ -97,6 +105,7 @@ export const pageQuery = graphql`
         description
         date(formatString: "YYYY.MM.DD")
         category
+        tags
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1200) {
