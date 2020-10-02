@@ -8,13 +8,13 @@ import PostList from "../components/PostList";
 // TODO: footer の作成
 // TODO: ロゴ作成
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const posts = data.allMdx.edges;
 
   return (
     <Layout>
       <SEO title="Home" />
-      <PostList posts={posts} />
+      <PostList posts={posts} location={location} />
     </Layout>
   );
 };

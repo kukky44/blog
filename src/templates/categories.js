@@ -17,7 +17,7 @@ const Categories = ({ pageContext, data, location }) => {
   return (
     <Layout location={location}>
       <SEO title={categoryName} />
-      <PostList posts={posts} />
+      <PostList posts={posts} location={location} />
     </Layout>
   );
 };

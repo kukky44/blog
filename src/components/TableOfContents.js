@@ -58,7 +58,12 @@ function renderItems(items, activeId) {
 function TableOfContents(props) {
   const idList = getIds(props.data.items);
   const activeId = useActiveId(idList);
-  const tableHeight = (window.innerHeight / 3) * 2;
+  let tableHeight;
+  if (typeof window !== `undefined`) {
+    tableHeight = (window.innerHeight / 3) * 2;
+  } else {
+    tableHeight = "320";
+  }
   return (
     <div style={{ maxHeight: tableHeight }} className="tableOfContentWrapper">
       {renderItems(props.data.items, activeId)}
