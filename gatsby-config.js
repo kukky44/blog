@@ -73,7 +73,20 @@ module.exports = {
                   classes: "alert",
                   title: "optional",
                 },
+                imageSmall: {
+                  classes: "image-small",
+                },
+                imageMedium: {
+                  classes: "image-medium",
+                },
               },
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: false,
             },
           },
         ],
@@ -89,12 +102,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -106,6 +113,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/contents/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/contents/assets`,
       },
     },
     {

@@ -123,6 +123,30 @@ body {
 | - like this
 
 -----
+## Image
+
+```
+![sampleAlt](./image.png)
+```
+
+![sampleAlt](./image.png)
+
+The image file is located in the same folder as index.md.
+### Image sizes
+```
+[[imageMedium]]
+| ![alt](./image.png)
+
+[[imageSmall]]
+| ![alt](./image.png)
+```
+[[imageMedium]]
+| ![alt](./image.png)
+
+[[imageSmall]]
+| ![alt](./image.png)
+
+-----
 ## Horizontal line
 
 ```

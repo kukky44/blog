@@ -224,6 +224,32 @@
       font-weight: 600;
     }
   }
+
+  .gatsby-resp-image-wrapper {
+    margin: 1em 0px;
+    border: 1px solid rgb(229, 232, 234);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .custom-block.image-small,
+  .custom-block.image-medium {
+    background: rgb(241, 244, 247);
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .custom-block.image-medium .gatsby-resp-image-wrapper {
+    border: none;
+    max-width: 450px !important;
+  }
+  .custom-block.image-small .gatsby-resp-image-wrapper {
+    border: none;
+    max-width: 350px !important;
+  }
 }
 
 .relatedPost {
