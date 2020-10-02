@@ -4,11 +4,9 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import PostList from "../components/PostList";
 
-// TODO: 本文の余白の見直し
 // TODO: プロフィールのSNS icon
 // TODO: footer の作成
 // TODO: ロゴ作成
-// TODO: 本文の画像埋め込み実装
 
 const IndexPage = ({ data }) => {
   const posts = data.allMdx.edges;
