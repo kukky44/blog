@@ -6,7 +6,7 @@ import PostList from "../components/PostList";
 
 // TODO: プロフィールのSNS icon
 // TODO: footer の作成
-// TODO: ロゴ作成
+// TODO: 404ページ
 
 const IndexPage = ({ data, location }) => {
   const posts = data.allMdx.edges;
