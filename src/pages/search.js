@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import PostCard from "../components/PostCard";
-import SearchForm from "../components/SearchForm";
-import getSearchData from "../module/getSearchData";
-import getSearchResult from "../module/getSearchResult";
+import Fuse from "fuse.js";
 
 const Search = ({ location }) => {
   const queryData = useStaticQuery(
@@ -44,34 +42,71 @@ const Search = ({ location }) => {
 
   const postData = queryData.allMdx.edges;
 
-  const searchData = getSearchData({ postData });
-  let resultPosts = [];
-  let isEmpty = false;
-  let searchQuery = new URLSearchParams(location.search).get("keywords") || "";
-  if (searchQuery) {
-    resultPosts = getSearchResult({
-      query: searchQuery,
-      posts: postData,
-      search: searchData,
-    });
-    if (resultPosts.length === 0) isEmpty = true;
-  }
+  const [resultPosts, setResults] = useState([]);
+  const [isEmpty, setIsempty] = useState(false);
+
+  const handleChange = (e) => {
+    const query = e.target.value;
+    if (query) {
+      const options = {
+        keys: [
+          {
+            name: "node.frontmatter.title",
+            weight: 2,
+          },
+          {
+            name: "node.frontmatter.description",
+            weight: 1,
+          },
+          {
+            name: "node.rawBody",
+            weight: 0.5,
+          },
+        ],
+      };
+      const fuse = new Fuse(postData, options);
+      const result = fuse.search(query);
+      setResults(result);
+      if (resultPosts.length === 0) setIsempty(true);
+    } else {
+      setIsempty(false);
+      setResults([]);
+    }
+  };
 
   return (
     <Layout location={location}>
       <SEO title="Search" />
       <div className="searchWrapper">
         <div className="search">
-          <SearchForm location={location} searchData={searchData} />
+          <div className="searchFormWrapper">
+            <div className="searchForm">
+              <input
+                type="text"
+                className="searchForm-input"
+                autoComplete="off"
+                placeholder="Search..."
+                onChange={handleChange}
+                autoFocus={true} // eslint-disable-line
+              />
+            </div>
+          </div>
           <div className="search-result">
             {resultPosts.length ? (
               <div className="postcards">
-                {resultPosts.map(({ node }) => (
-                  <PostCard key={node.fields.slug} node={node} />
-                ))}
+                {resultPosts.map((data) =>
+                  data === undefined ? (
+                    ""
+                  ) : (
+                    <PostCard
+                      key={data.item.node.fields.slug}
+                      node={data.item.node}
+                    />
+                  )
+                )}
               </div>
             ) : isEmpty ? (
-              "no posts..."
+              <div className="search-noPost">No results</div>
             ) : (
               ""
             )}

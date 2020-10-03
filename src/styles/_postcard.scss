@@ -12,11 +12,11 @@
 .postcard-wrapper {
   background: $white;
   box-shadow: $base_shadow;
-  transition: 0.5s;
+  transition: 0.3s;
 
   &:hover {
     box-shadow: $hover_shadow;
-    transform: translateY(-2px);
+    transform: translateY(-1.5px);
   }
 }
 
@@ -27,7 +27,7 @@
     .postcard-item {
       &__thumb {
         &Img {
-          opacity: 0.8;
+          opacity: 0.9;
         }
       }
 

@@ -29,13 +29,17 @@ const CategoryMenu = ({ location }) => {
     <nav className="category-menu">
       <ul className="category-menu__list">
         <CategoryLink catName="All" catLink="/" path={path} />
-        <CategoryLink catName="Design" catLink="/category/design" path={path} />
         <CategoryLink
-          catName="Develop"
-          catLink="/category/develop"
+          catName="Design"
+          catLink="/category/design/"
           path={path}
         />
-        <CategoryLink catName="Self" catLink="/category/self" path={path} />
+        <CategoryLink
+          catName="Develop"
+          catLink="/category/develop/"
+          path={path}
+        />
+        <CategoryLink catName="Self" catLink="/category/self/" path={path} />
       </ul>
     </nav>
   );

@@ -1,7 +1,7 @@
-@keyframes tagFadeIn {
+@keyframes FadeIn {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(2px);
   }
   100% {
     opacity: 1;
@@ -28,11 +28,6 @@
 
     &-input {
       font-size: 2em;
-      margin-right: 0.5em;
-
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-      }
 
       @include mq(sm) {
         font-size: 1.5em;
@@ -43,43 +38,21 @@
         outline: none;
       }
     }
-
-    &-btn {
-      font-size: 2em !important;
-      padding: 15px;
-      color: $type_grey;
-      pointer-events: none;
-      transition: 0.3s;
-
-      &.active {
-        cursor: pointer;
-        pointer-events: auto;
-        transition: 0.3s;
-        color: $black;
-
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-
-      &:active {
-        outline: none;
-      }
-    }
-
-    &-suggestTag {
-      animation-name: tagFadeIn;
-      animation-duration: 0.3s;
-
-      .postcard-tags {
-        &__item {
-          margin-right: 1em;
-        }
-      }
-    }
   }
 
   &-result {
     margin-top: 2em;
+
+    .postcard-wrapper {
+      animation-name: FadeIn;
+      animation-duration: 0.5s;
+    }
+  }
+
+  &-noPost {
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.5;
   }
 }

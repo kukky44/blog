@@ -35,7 +35,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout postPage={post}>
       <SEO title={title} description={description || post.excerpt} />
-      <div className="flexContent">
+      <div className="flexContent post">
         <div className="flexContent-main">
           <div className="post-wrapper">
             <div className="post-item">

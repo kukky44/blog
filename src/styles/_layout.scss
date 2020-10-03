@@ -36,6 +36,12 @@
     }
   }
 
+  &.post {
+    @include mq(sm) {
+      padding: 0;
+    }
+  }
+
   &-main {
     width: calc((100% - 300px) - 2em);
     margin-right: 2em;

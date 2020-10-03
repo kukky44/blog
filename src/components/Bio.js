@@ -17,7 +17,7 @@ const Bio = () => {
               <div className="bio-header__name">{author}</div>
             </div>
             <div className="bio-description">
-              デザイナー・フロントエンジニア。UI/UXを主にやっています。個人でWebサービスもつくっています。
+              I'm a beginner of design, frontend and English from Japan.
             </div>
             <div className="bio-social">
               <a href={social.twitter}>Twitter</a>
