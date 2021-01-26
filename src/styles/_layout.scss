@@ -98,4 +98,24 @@
     font-weight: 600;
     margin-bottom: 1.5em;
   }
+
+  &-social {
+    display: flex;
+    margin-top: 1.5em;
+
+    &__link {
+      margin-right: 1em;
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__title {
+      margin-top: -4px;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+  }
 }

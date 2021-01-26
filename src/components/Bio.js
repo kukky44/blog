@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Avatar from "../images/tomoe1.png";
+import TwitterSvg from "../images/twitter.svg";
 
 const Bio = () => {
   return (
@@ -20,7 +21,39 @@ const Bio = () => {
               I'm a beginner of design, frontend and English from Japan.
             </div>
             <div className="bio-social">
-              <a href={social.twitter}>Twitter</a>
+              <a
+                className="bio-social__link"
+                href={"https://twitter.com/" + social.tiwtter}
+              >
+                <img
+                  className="bio-social__img"
+                  alt="twitter"
+                  src={TwitterSvg}
+                />
+                <div className="bio-social__title">Twitter</div>
+              </a>
+              <a
+                className="bio-social__link"
+                href={"https://twitter.com/" + social.tiwtter}
+              >
+                <img
+                  className="bio-social__img"
+                  alt="twitter"
+                  src={TwitterSvg}
+                />
+                <div className="bio-social__title">Twitter</div>
+              </a>
+              <a
+                className="bio-social__link"
+                href={"https://twitter.com/" + social.tiwtter}
+              >
+                <img
+                  className="bio-social__img"
+                  alt="twitter"
+                  src={TwitterSvg}
+                />
+                <div className="bio-social__title">Twitter</div>
+              </a>
             </div>
           </div>
         );

@@ -2,7 +2,7 @@ function headerShowOff() {
   if (typeof window !== "undefined") {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
-      if (window.pageYOffset < 64) {
+      if (window.pageYOffset < 16) {
         document.getElementById("navbar").classList.remove("onScroll");
       } else {
         document.getElementById("navbar").classList.add("onScroll");

@@ -6,7 +6,7 @@ module.exports = {
     author: `Kukky`,
     description: `This is the portfolio of Kukky`,
     social: {
-      twitter: `@kukky_design`,
+      twitter: `kukky_design`,
     },
     categories: [
       {
