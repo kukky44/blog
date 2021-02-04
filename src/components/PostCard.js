@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import TagList from "./TagList";
+// import TagList from "./TagList";
 
 const PostCard = ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug;
   const Thumbnail = node.frontmatter.thumbnail.childImageSharp.fluid;
-  const tags = node.frontmatter.tags;
+  // const tags = node.frontmatter.tags;
 
   return (
     <div className="postcard-wrapper">
@@ -23,7 +23,7 @@ const PostCard = ({ node }) => {
           <h2 className="postcard-item__title">{title}</h2>
         </div>
       </Link>
-      {tags ? <TagList items={tags} /> : null}
+      {/* {tags ? <TagList items={tags} /> : null} */}
     </div>
   );
 };

@@ -2,8 +2,8 @@
 title: Markdown cheatsheet of this blog
 date: 2020-09-25 17:35:40
 description: Markdown cheatsheet of this blog
-category: develop
-tags: ["react", "markdown"]
+category: design
+tags: ["markdown"]
 thumbnail: template_thumb.png
 ---
 

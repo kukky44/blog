@@ -18,34 +18,12 @@ const Bio = () => {
               <div className="bio-header__name">{author}</div>
             </div>
             <div className="bio-description">
-              I'm a beginner of design, frontend and English from Japan.
+              I'm fond of design, programming, and English.
             </div>
             <div className="bio-social">
               <a
                 className="bio-social__link"
-                href={"https://twitter.com/" + social.tiwtter}
-              >
-                <img
-                  className="bio-social__img"
-                  alt="twitter"
-                  src={TwitterSvg}
-                />
-                <div className="bio-social__title">Twitter</div>
-              </a>
-              <a
-                className="bio-social__link"
-                href={"https://twitter.com/" + social.tiwtter}
-              >
-                <img
-                  className="bio-social__img"
-                  alt="twitter"
-                  src={TwitterSvg}
-                />
-                <div className="bio-social__title">Twitter</div>
-              </a>
-              <a
-                className="bio-social__link"
-                href={"https://twitter.com/" + social.tiwtter}
+                href={"https://twitter.com/" + social.twitter}
               >
                 <img
                   className="bio-social__img"
