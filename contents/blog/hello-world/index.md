@@ -16,7 +16,7 @@ It's good to have a place where I can write about my thoughts and keep records o
 ## How I build this blog
 
 This blog is created with [Gatsby](https://www.gatsbyjs.com/) and hosted by [Netlify](https://www.netlify.com/).
-I can write a post as a markdown file, up files to GitHub, and they are automatically deployed by Netlify.
+I can write posts as markdown, up files to GitHub, and they are automatically deployed by Netlify.
 
 ## Difficult points to build
 There were a few challenging points I faced while developing.
