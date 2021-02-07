@@ -6,19 +6,20 @@ category: self
 tags: 
 thumbnail: gatsby_netlify.png
 ---
+I will explain why and how I created this blog site.
 ## Why I created this blog
 
-I created this blog to feel free to write anything, it's is inspired by [CatNose's blog](https://catnose99.com/).
+I created this blog as I just wanted to create a website and try Gatsby, inspired by [CatNose's blog](https://catnose99.com/).
 
 It's good to have a place where I can write about my thoughts and keep records of my works.
 
 ## How I build this blog
 
 This blog is created with [Gatsby](https://www.gatsbyjs.com/) and hosted by [Netlify](https://www.netlify.com/).
-I can write posts with markdown, up files to GitHub, and they are automatically deployed by Netlify.
+I can write a post as a markdown file, up files to GitHub, and they are automatically deployed by Netlify.
 
 ## Difficult points to build
-
+There were a few challenging points I faced while developing.
 #### Table of contents
 [[imageMedium]]
 | ![table of contents](./table-of-content.png)
