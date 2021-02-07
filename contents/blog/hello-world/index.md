@@ -24,7 +24,7 @@ There were a few challenging points I faced while developing.
 [[imageMedium]]
 | ![table of contents](./table-of-content.png)
 
-I was struggled to make this chasing table of contents feature.
+I struggled to make this chasing table of contents feature.
 I solved the problem thanks to [https://nickymeuleman.netlify.app/blog/table-of-contents](https://nickymeuleman.netlify.app/blog/table-of-contents).
 
 #### Search function
