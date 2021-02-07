@@ -25,7 +25,7 @@ There were a few challenging points I faced while developing.
 | ![table of contents](./table-of-content.png)
 
 I struggled to make this chasing table of contents feature.
-I solved the problem thanks to [https://nickymeuleman.netlify.app/blog/table-of-contents](https://nickymeuleman.netlify.app/blog/table-of-contents).
+It was solved thanks to [https://nickymeuleman.netlify.app/blog/table-of-contents](https://nickymeuleman.netlify.app/blog/table-of-contents).
 
 #### Search function
 It was difficult to find a way of building a smooth search function. I still try to improve it.
