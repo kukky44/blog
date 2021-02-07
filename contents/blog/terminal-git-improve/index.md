@@ -1,11 +1,13 @@
 ---
-title: Improve the use of Terminal screen
+title: Improve the use of Terminal screen with iTerm2 and Oh My Zsh
 date: 2020-09-23 20:02:16
 description: How to improve the use of Terminal and git by customising with plugins and an app
 category: develop
 tags: ["terminal"]
 thumbnail: git_terminal.png
 ---
+I found an awesome application and an open-source framework which makes terminal workflow easy and comfortable.
+I will briefly explain them.
 ## Install iTerm2
 
 iTerm2 is an alternative application for Terminal.

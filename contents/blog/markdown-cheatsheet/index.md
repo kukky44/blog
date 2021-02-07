@@ -6,7 +6,7 @@ category: design
 tags: ["markdown"]
 thumbnail: template_thumb.png
 ---
-
+This post is the markdown cheatsheet of this blog.
 ## Heading
 
 ```

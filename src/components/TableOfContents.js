@@ -23,7 +23,7 @@ function useActiveId(itemIds) {
           }
         });
       },
-      { rootMargin: `0% 0% -50% 0%` }
+      { rootMargin: `0% 0% -60% 0%` }
     );
     itemIds.forEach((id) => {
       observer.observe(document.getElementById(id));
