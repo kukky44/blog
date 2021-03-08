@@ -2,7 +2,7 @@
 title: Markdown cheatsheet of this blog
 date: 2020-09-25 17:35:40
 description: Markdown cheatsheet of this blog
-category: design
+category: self
 tags: ["markdown"]
 thumbnail: template_thumb.png
 ---
