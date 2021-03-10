@@ -4,9 +4,9 @@
   font-size: 1.25em;
   font-family: $accent_font;
   font-weight: bold;
-  overflow: scroll;
 
   @include mq(sm) {
+    overflow: scroll;
     font-size: 1.15em;
     padding: 0.5em 1em 1.25em;
   }
