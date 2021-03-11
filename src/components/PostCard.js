@@ -9,8 +9,8 @@ const PostCard = ({ node }) => {
   // const tags = node.frontmatter.tags;
 
   return (
-    <div className="postcard-wrapper">
-      <Link className="postcard-item" to={node.fields.slug}>
+    <Link className="postcard-wrapper" to={node.fields.slug}>
+      <div className="postcard-item">
         <div className="postcard-item__thumb">
           <div className={"postcard-item__cat " + node.frontmatter.category}>
             {node.frontmatter.category.charAt(0).toUpperCase() +
@@ -22,9 +22,9 @@ const PostCard = ({ node }) => {
           <div className="postcard-item__date">{node.frontmatter.date}</div>
           <h2 className="postcard-item__title">{title}</h2>
         </div>
-      </Link>
-      {/* {tags ? <TagList items={tags} /> : null} */}
-    </div>
+        {/* {tags ? <TagList items={tags} /> : null} */}
+      </div>
+    </Link>
   );
 };
 

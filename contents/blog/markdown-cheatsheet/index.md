@@ -4,7 +4,7 @@ date: 2020-09-25 17:35:40
 description: Markdown cheatsheet of this blog
 category: self
 tags: ["markdown"]
-thumbnail: template_thumb.png
+thumbnail: thumbnail.png
 ---
 This post is the markdown cheatsheet of this blog.
 ## Heading
