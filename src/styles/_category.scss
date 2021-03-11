@@ -9,6 +9,11 @@
     overflow: scroll;
     font-size: 1.15em;
     padding: 0.5em 1em 1.25em;
+    justify-content: space-evenly;
+  }
+  @include mq(xs) {
+    overflow-x: scroll;
+    justify-content: start;
   }
 }
 
@@ -21,6 +26,14 @@
     margin-right: 1.5em;
     transition: 0.3s;
     text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+
+      @include mq(xs) {
+        margin-right: 1.5em;
+      }
+    }
 
     &:hover {
       .cat-item__underline {
