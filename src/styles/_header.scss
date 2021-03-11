@@ -6,6 +6,8 @@
   transition: 0.3s;
   box-shadow: none;
   top: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
 
   &.onScroll {
     box-shadow: $base_shadow;
