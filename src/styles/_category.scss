@@ -6,14 +6,9 @@
   font-weight: bold;
 
   @include mq(sm) {
-    overflow: scroll;
+    overflow-x: scroll;
     font-size: 1.15em;
     padding: 0.5em 1em 1.25em;
-    justify-content: space-evenly;
-  }
-  @include mq(xs) {
-    overflow-x: scroll;
-    justify-content: start;
   }
 }
 
@@ -28,11 +23,7 @@
     text-align: center;
 
     &:last-child {
-      margin-right: 0;
-
-      @include mq(xs) {
-        margin-right: 1.5em;
-      }
+      padding-right: 1em;
     }
 
     &:hover {
