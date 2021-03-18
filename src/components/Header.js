@@ -1,25 +1,11 @@
 import React from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import headerShowOff from "../module/headerShowOff";
 import Logo from "../images/logo.svg";
+import SearchIcon from "../images/search_icon.svg";
 
-const Header = ({ location }) => {
-  let isSearchPage = false;
-  if (typeof location !== "undefined") {
-    if (location.pathname === "/search") {
-      isSearchPage = true;
-    }
-  }
+const Header = () => {
   headerShowOff();
-
-  function pageBack() {
-    if (typeof location !== "undefined") {
-      if (location.search) {
-        return navigate("/");
-      }
-    }
-    window.history.back();
-  }
 
   return (
     <header id="navbar" className="header">
@@ -30,17 +16,11 @@ const Header = ({ location }) => {
               <img src={Logo} alt="Kukky" />
             </h1>
           </Link>
-          {isSearchPage ? (
-            <div className="header-content__search">
-              <button onClick={pageBack} className="material-icons">
-                close
-              </button>
-            </div>
-          ) : (
-            <Link to="/search" className="header-content__search">
-              <button className="material-icons">search</button>
-            </Link>
-          )}
+
+          <Link to="/search" className="header-content__search">
+            {/* <button className="material-icons">search</button> */}
+            <img src={SearchIcon} alt="search" />
+          </Link>
         </div>
       </div>
     </header>
