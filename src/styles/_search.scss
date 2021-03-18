@@ -34,7 +34,7 @@
       padding: 0.5em 0.7em;
 
       @include mq(sm) {
-        font-size: 1em;
+        font-size: 1.25em;
       }
 
       &:focus {
@@ -45,6 +45,11 @@
 
   &-result {
     margin-top: 2em;
+    padding: 0 1em;
+
+    @include mq(sm) {
+      margin-top: 1em;
+    }
 
     .postcard-wrapper {
       animation-name: FadeIn;
