@@ -29,15 +29,20 @@
     &-input {
       width: 100%;
       font-size: 1.5em;
-      border: 1px solid $primary;
+      background-color: #efecf3;
       border-radius: 1.2em;
       padding: 0.5em 0.7em;
+      border: 1px solid transparent;
+      transition-property: border, background-color;
+      transition-duration: 0.3s;
 
       @include mq(sm) {
         font-size: 1.25em;
       }
 
       &:focus {
+        background: none;
+        border: 1px solid $primary;
         outline: none;
       }
     }
