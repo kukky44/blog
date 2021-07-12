@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import Avatar from "../images/tomoe1.png";
+import Avatar from "../images/profile.png";
 import TwitterSvg from "../images/twitter.svg";
 
 const Bio = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import headerShowOff from "../module/headerShowOff";
-import Logo from "../images/logo.svg";
+// import Logo from "../images/logo.svg";
 import SearchIcon from "../images/search_icon.svg";
 
 const Header = () => {
@@ -13,7 +13,8 @@ const Header = () => {
         <div className="header-content">
           <Link className="header-content__title" to="/">
             <h1 className="header-content__titleText">
-              <img src={Logo} alt="Kukky" />
+              {/* <img src={LogoImage} alt="Kukky" /> */}
+              Kukky
             </h1>
           </Link>
 
