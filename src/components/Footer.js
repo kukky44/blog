@@ -20,7 +20,7 @@ const Footer = () => {
         return (
           <div className="footer">
             <div className="allTags">
-              <div className="allTags-title">Tags</div>
+              <div className="allTags-title">All Tags</div>
               <TagList items={tagList} />
             </div>
             <footer className="footer-content">
