@@ -2,6 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Avatar from "../images/profile.png";
 import TwitterSvg from "../images/twitter.svg";
+// import FacebookSvg from "../images/facebook.svg";
 
 const Bio = () => {
   return (
@@ -18,7 +19,7 @@ const Bio = () => {
               <div className="bio-header__name">{author}</div>
             </div>
             <div className="bio-description">
-              I'm fond of design, programming, and English.
+              I'm fond of design and programming.
             </div>
             <div className="bio-social">
               <a
@@ -30,8 +31,19 @@ const Bio = () => {
                   alt="twitter"
                   src={TwitterSvg}
                 />
-                <div className="bio-social__title">Twitter</div>
+                {/* <div className="bio-social__title">Twitter</div> */}
               </a>
+              {/* <a
+                className="bio-social__link"
+                href={"https://facebook.com/" + social.twitter}
+              >
+                <img
+                  className="bio-social__img"
+                  alt="twitter"
+                  src={FacebookSvg}
+                />
+                <div className="bio-social__title">Facebook</div>
+              </a> */}
             </div>
           </div>
         );
@@ -47,6 +59,7 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          facebook
         }
       }
     }

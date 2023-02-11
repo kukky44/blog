@@ -6,7 +6,9 @@ module.exports = {
     author: `Kukky`,
     description: `This is a blog site of Kukky`,
     social: {
-      twitter: `kukky_design`,
+      // twitter: `kukky_design`,
+      twitter: ``,
+      facebook: ``,
     },
     categories: [
       {

@@ -1,17 +1,18 @@
 .header {
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  // background-color: rgba(255, 255, 255, 0.5);
   z-index: 2;
-  transition: 0.3s;
+  transition: 0.4s;
   box-shadow: none;
   top: 0;
-  backface-visibility: hidden;
+  // backface-visibility: hidden;
   overflow: hidden;
+  background: $bg_color;
 
   &.onScroll {
-    box-shadow: $base_shadow;
-    background-color: $white;
+    // box-shadow: $base_shadow;
+    // background-color: $white;
   }
 }
 
@@ -32,7 +33,7 @@
   &__titleText {
     font-family: $accent_font;
     font-size: 1.25em;
-    font-weight: 400;
+    font-weight: 500;
     // height: 100%;
     // display: flex;
     // align-items: center;
